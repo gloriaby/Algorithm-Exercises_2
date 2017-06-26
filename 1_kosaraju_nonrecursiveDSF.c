@@ -1,4 +1,5 @@
 //suppost the number of vertex (not the number of lines in file) is already known (N=875714)
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -96,6 +97,7 @@ int main(){
 	return 0;
 
 }
+
 
 struct LinkedNode** getAjlist(FILE* fp, int reversed){
 	char head[10], tail[10];///////////
@@ -253,6 +255,7 @@ void DFS_nonrecursion(struct LinkedNode** ajlist, int i, int* leader, int* finis
 	}
 }
 	
+
 void push(int i){
 	if(S.top==N-1){
 		printf("stack is already full, can not push anything\n");
