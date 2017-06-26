@@ -97,7 +97,6 @@ int main(){
 
 }
 
-
 struct LinkedNode** getAjlist(FILE* fp, int reversed){
 	char head[10], tail[10];///////////
 	struct LinkedNode** ajlist=malloc(sizeof(struct LinkedNode*)*N);
