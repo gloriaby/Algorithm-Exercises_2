@@ -1,5 +1,4 @@
 //suppost the number of vertex (not the number of lines in file) is already known (N=875714)
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
