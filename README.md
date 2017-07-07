@@ -49,11 +49,59 @@ to increase the stack size to 32M Bytes before running my code. After running my
 ## Week 2.
 Related Files:
 
-* dijkstra.c
-* dijkstraData.txt
+* 2_dijkstra.c
+* 2_dijkstraData.txt
 
+### Task
 
+Given an adjacent list representing an undirected weighted graph in file 2_dijkastraData.txt. For each line, the first colomn represent the node number (from 1 to 200) and other columns are tuples of (node, weight) that connected with the node in the first column. Set node 1 as the source node, compute the shortest paths to all other nodes from the source. (If there is no path between the source and the destination, set the shortest paths to be 1000000.)
+
+### Dijkstra's Algorithm
+
+According to the same course, the algorithm can be described as:
+
+* Initialize the set X (nodes that are explored): put the source node into that set.
+* Set the shortest path to source node equals to 0.
+
+* while we could found nodes to be put into set X:
+	* among all **edges** (v,w) with v in set X and w not in set X, pick the one that minimize **the shortest paths to node v plus distance between v and w**. 
+	* add w to set X
+	* set the shortest path to w equals **the shortest paths to node v plus distance between v and w**
+
+### My Implementation
+
+About the `while` condition, I have an int variable `X_size` to record the times we go through the while loop. If for any node `w`, there always exists a shortest path from souce node to node `w`, then for each iteration, we will always found a new node `w` and set its shortest path and increase the `X_size` by 1. For this case `X_size` means the number of nodes in set X. If for a node `w`, there is actually no path between the source to it, we could check whether `w_old==w` where `w_old` is the variable I set equals to `w` in the last iteration. If `w_old==w` then we know that we didn't find any node in this iteration. We will not put node `w` into set X (element `X[w-1]` will not be set to 1 in my code) and we will set the shortest path between the sorce node to node `w` equal to 1000000. Note that no matter whether we could find any node to be added into set X in each iteration, X_size will always increase by 1 for each iteration. If there exist some nodes that can not be reached from the source, `X_size` will not represent the size of set X. Instead, it just used to record the number of iterations we have experienced so far.
+
+To check amoung all edges, I simply go through all edges which meet the requirement (one vertex in in set X and another one not) so that the complexity would be O(mn) where m is the number of edges and n is the number of vertexes.
+
+### Run My Code
+
+The output will gives the shortest paths from source node 1 to all the nodes.
 
 ## Week 3.
 
 ## Week 4.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
