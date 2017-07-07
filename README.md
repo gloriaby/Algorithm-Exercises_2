@@ -47,6 +47,12 @@ You may need to modify the stack size if you are trying to compute the directed 
 to increase the stack size to 32M Bytes before running my code. After running my code, the the number of nodes in each SCC will be output to the file 1\_countleader.txt.
 
 ## Week 2.
+Related Files:
+
+* dijkstra.c
+* dijkstraData.txt
+
+
 
 ## Week 3.
 
