@@ -83,7 +83,7 @@ int main(){
 	}
 
 	//output the record into another file in order to sort the result
-	FILE* r=fopen("countleader.txt", "w");
+	FILE* r=fopen("week1_countleader.txt", "w");
 	for(i=0;i<N;i++){
 		if(count[i]!=0){
 			fprintf(r, "%d nodes in SCC with leader %d\n", count[i], i+1);
