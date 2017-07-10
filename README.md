@@ -1,9 +1,9 @@
 ## Week 1. Strongly Connected Component
 Related files:
 
-* 1\_kosaraju\_nonrecursiveDFS.c,
+* week1\_kosaraju\_nonrecursiveDFS.c,
 * 1\_SCC.txt,
-* 1\_countleader.txt
+* week1\_countleader.txt
 
 ### Task
 The directed graph (tail---->head) is given in file 1\_SCC.txt with tails in the first column and heads in the second column. Computing the [Strongly Connected Component (SCC)](https://en.wikipedia.org/wiki/Strongly_connected_component) on this graph and find the size of each SCC.
@@ -49,8 +49,8 @@ to increase the stack size to 32M Bytes before running my code. After running my
 ## Week 2.
 Related Files:
 
-* 2_dijkstra.c
-* 2_dijkstraData.txt
+* week2_dijkstra.c
+* week2_dijkstraData.txt
 
 ### Task
 
